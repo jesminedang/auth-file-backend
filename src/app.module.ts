@@ -6,9 +6,10 @@ import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { PrismaService } from './prisma.service';
 import { UserService } from './user/user.service';
+import { FilesModule } from './files/files.module';
 
 @Module({
-  imports: [ConfigModule.forRoot({isGlobal: true}), UserModule, AuthModule],
+  imports: [ConfigModule.forRoot({isGlobal: true}), UserModule, AuthModule, FilesModule],
   controllers: [AppController],
   providers: [AppService, UserService, PrismaService],
 })
